@@ -423,31 +423,18 @@ body {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 1.5rem 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
 }
 .card__side--front {
   background-color: #ffffff;
 }
-.card__side--back {
-  transform: rotateY(180deg);
+
+.card__side:hover {
+  top: -1rem;
+  left: 0;
+  box-shadow: 0 2rem 40px rgba(0, 0, 0, 0.15);
 }
-.card__side--back-1 {
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
-}
-.card__side--back-2 {
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
-.card__side--back-3 {
-  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
-}
-.card__side--back-4 {
-  background-image: linear-gradient(to right bottom, #eea0e8, #f047e2);
-}
-.card:hover .card__side--front {
-  transform: rotateY(-180deg);
-}
-.card:hover .card__side--back {
-  transform: rotateY(0);
-}
+
 .card__picture {
   background-size: cover;
   height: 23rem;
@@ -495,8 +482,8 @@ body {
 .card__heading-span--2 {
   background-image: linear-gradient(
     to right bottom,
-    rgba(126, 213, 111, 0.85),
-    rgba(40, 180, 133, 0.85)
+    rgba(238, 160, 232, 0.85),
+    rgba(240, 71, 226, 0.85)
   );
 }
 .card__heading-span--3 {
@@ -509,8 +496,8 @@ body {
 .card__heading-span--4 {
   background-image: linear-gradient(
     to right bottom,
-    rgba(238, 160, 232, 0.85),
-    rgba(240, 71, 226, 0.85)
+    rgba(126, 213, 111, 0.85),
+    rgba(40, 180, 133, 0.85)
   );
 }
 .card__details {
@@ -736,4 +723,9 @@ body {
 }
 .row .col-3-of-4 {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: lightslategray;
 }
